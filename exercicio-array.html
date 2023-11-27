@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Array</title>
+    <style>
+
+        body {
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Exercício array</h2>
+
+    <label for="valor">Valor</label>
+    <input id="valor" type="text"><br><br>
+
+    <button onclick="adicionaValorFimArray()">Add value end</button><br><br>
+    <button onclick="adicionaValorInicioArray()">Add value start</button><br><br>
+    <button onclick="removeValorFimArray()">Remove value end</button><br><br>
+    <button onclick="removeValorInicioArray()">Remove value start</button><br><br>
+
+    <script>
+
+        const carros = [
+            'bugatti',
+            'rollsroice',
+            'mclaren',
+            'ferrari',
+            'porsche',
+        ];
+
+        function adicionaValorFimArray() {
+            const valor = document.getElementById('valor').value;
+            carros.push(valor);
+            console.log(carros.toString());
+        }
+
+        function adicionaValorInicioArray() {
+            const valor = document.getElementById('valor').value;
+            carros.unshift(valor);
+            console.log(carros.toString());
+        }
+
+        function removeValorFimArray() {
+            const valor = document.getElementById('valor').value;
+            carros.pop(valor);
+            console.log(carros.toString());
+        }
+
+        function removeValorInicioArray() {
+            const valor = document.getElementById('valor').value;
+            carros.shift(valor);
+            console.log(carros.toString());
+        }
+
+    </script>
+    
+</body>
+</html>
